@@ -39,9 +39,9 @@ public class UserController {
         }
 
         if(userRepo.findById(user.getId()) != null) {
-            return new Response<>(3001, "Duplicated id");
+            return new Response<>(1001, "Duplicated id");
         }
 
-        return new Response<>(3002, "Data will be reviewed before able to retrieve with this API");
+        return new Response<>(1002, "Data will be reviewed before able to retrieve with this API");
     }
 }
