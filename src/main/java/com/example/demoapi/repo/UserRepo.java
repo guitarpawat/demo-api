@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class UserRepo {
@@ -43,14 +44,9 @@ public class UserRepo {
                     null)
     );
 
-    public List<User> findAll() {
-        return  users;
-    }
-
-    public User findById(int id) {
+    public Optional<User> findById(int id) {
         return users.stream()
                 .filter(x -> x.getId() == id)
-                .findFirst()
-                .orElse(null);
+                .findFirst();
     }
 }

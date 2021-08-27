@@ -7,5 +7,5 @@ import lombok.Data;
 @AllArgsConstructor
 public class Hobby {
     private String name;
-    private boolean isOutdoor;
+    private Boolean isOutdoor;
 }
